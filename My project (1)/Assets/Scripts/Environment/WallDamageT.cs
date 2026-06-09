@@ -13,6 +13,6 @@ public class WallDamage : MonoBehaviour
         }
 
         // ◊‘∂Ø…Ë÷√ Tag
-        gameObject.tag = "Wall";
+        //gameObject.tag = "Wall";
     }
 }
