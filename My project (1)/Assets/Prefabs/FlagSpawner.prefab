@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1134904272084018574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5786740009352232201}
+  - component: {fileID: 8673429202890979127}
+  m_Layer: 0
+  m_Name: FlagSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5786740009352232201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134904272084018574}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 662.58386, y: 168.22418, z: -688.07544}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8673429202890979127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134904272084018574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0869f94afdeb5f4ca7ef054e1e84b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteFlagPrefab: {fileID: 3856994813210069669, guid: 52bd5127590f1fe4bb1ba45a71bc8c54, type: 3}
+  redFlagPrefab: {fileID: 3261948256750054, guid: aaa17edd6bc89d34d945acce4d4dbd22, type: 3}
+  yellowFlagPrefab: {fileID: 4807875178844501316, guid: 2a6923fca1d53d74d8e5e3216aad9002, type: 3}
+  spawnPoints:
+  - {fileID: 8177126180323484745, guid: 3ff4b77b407d1a347aee0e8df1c3462b, type: 3}
+  - {fileID: 5943569392877556459, guid: 0c013e221b5e7594f9a5957a57532c8e, type: 3}
+  - {fileID: 6040204655386639502, guid: ec711a9745fb49143bffa58a76764be5, type: 3}
+  - {fileID: 5272537855009061225, guid: 90af31d19acd6ef40be2677801967ebc, type: 3}
+  - {fileID: 4577819000522173427, guid: ab7f54aee9b89d54582ca02e9731ce39, type: 3}
+  - {fileID: 6379982439547971378, guid: ecfbbd85e04fa4c4c9c36530d828bb0c, type: 3}
+  - {fileID: 862125958347341606, guid: d5ebca0bcd39efb41a32828348de5d69, type: 3}
+  - {fileID: 8888130154952493049, guid: ba7d44c6f1cabbe4b90c73b32e003a78, type: 3}
+  - {fileID: 2104396285349252967, guid: cc2a44f7aa154a4449db0ecd59b00a4d, type: 3}
+  - {fileID: 8033708732148093695, guid: 8b9f896b8da51584f8c59065e211b7e1, type: 3}

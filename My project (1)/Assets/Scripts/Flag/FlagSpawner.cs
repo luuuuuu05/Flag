@@ -1,61 +1,67 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FlagSpawner : MonoBehaviour
 {
-    public static FlagSpawner Instance;
-
-    public GameObject goldFlagPrefab;
-
-    public GameObject[] flagPrefabs;
+    public GameObject whiteFlagPrefab;
+    public GameObject redFlagPrefab;
+    public GameObject yellowFlagPrefab;
 
     public Transform[] spawnPoints;
 
-    private readonly List<GameObject> activeFlags =
-        new();
+    private List<Transform> usedPoints = new List<Transform>();
 
-    private void Awake()
+    void Start()
     {
-        Instance = this;
+        SpawnFlags();
     }
 
-    private void Start()
+    void SpawnFlags()
     {
-        SpawnFlag();
+        usedPoints.Clear();
+
+        SpawnMultiple(whiteFlagPrefab, 3);
+
+        SpawnMultiple(redFlagPrefab, 2);
+
+        SpawnMultiple(yellowFlagPrefab, 1);
     }
 
-    public void SpawnFlag()
+    void SpawnMultiple(GameObject prefab, int count)
     {
-        int index =
-            Random.Range(0, spawnPoints.Length);
+        for (int i = 0; i < count; i++)
+        {
+            Transform point = GetRandomPoint();
 
-        Transform point =
-            spawnPoints[index];
-
-        GameObject prefab =
-            flagPrefabs.Length > 0
-                ? flagPrefabs[Random.Range(0, flagPrefabs.Length)]
-                : goldFlagPrefab;
-
-        GameObject flag =
             Instantiate(
                 prefab,
                 point.position,
-                Quaternion.identity);
-
-        activeFlags.Add(flag);
+                Quaternion.identity
+            );
+        }
     }
 
-    public void FlagCollected()
+    Transform GetRandomPoint()
     {
-        StartCoroutine(Respawn());
-    }
+        List<Transform> available =
+            new List<Transform>();
 
-    IEnumerator Respawn()
-    {
-        yield return new WaitForSeconds(2f);
+        foreach (Transform point in spawnPoints)
+        {
+            if (!usedPoints.Contains(point))
+            {
+                available.Add(point);
+            }
+        }
 
-        SpawnFlag();
+        int index =
+            Random.Range(0, available.Count);
+
+        Transform selected =
+            available[index];
+
+        usedPoints.Add(selected);
+
+        return selected;
     }
 }

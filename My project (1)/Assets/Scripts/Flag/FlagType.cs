@@ -18,8 +18,8 @@ public class FlagType : MonoBehaviour
         return rarity switch
         {
             FlagRarity.Common => 10,
-            FlagRarity.Rare => 30,
-            FlagRarity.Legendary => 100,
+            FlagRarity.Rare => 20,
+            FlagRarity.Legendary => 30,
             _ => 10
         };
     }
