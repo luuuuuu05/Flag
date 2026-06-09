@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: ee2c6a6e9b91a894fb51b282ae11c27a
   - enabled: 1
-    path: Assets/Scenes/lxz.unity
-    guid: d22bfe72f57b886468dfcde6b0a3553d
-  - enabled: 1
-    path: Assets/Scenes/lyk.unity
-    guid: a06c97f760ce5a34c90f79d026390340
-  - enabled: 1
     path: Assets/Scenes/zy.unity
     guid: 03187221f0e4c284aa7e5e96248620d9
   m_configObjects:
