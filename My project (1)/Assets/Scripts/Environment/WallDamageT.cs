@@ -3,10 +3,16 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class WallDamage : MonoBehaviour
 {
-    private void Awake()
+    void Reset()
     {
+        // 自动挂 Collider
         Collider col = GetComponent<Collider>();
-        col.isTrigger = true;
+        if (col != null)
+        {
+            col.isTrigger = true;  // 设置 Trigger
+        }
+
+        // 自动设置 Tag
         gameObject.tag = "Wall";
     }
 }
